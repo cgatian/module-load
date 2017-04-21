@@ -10,10 +10,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "transpile": "ngc --p plugins.tsconfig.json",
+    "plugin:ngc": "ngc --p plugins.ngc.tsconfig.json",
+    "plugin:tsc": "tsc --p plugins.tsc.tsconfig.json",
     "package": "rollup -c",
     "prebuild:plugins": "npm run clean",
-    "build:plugins": "npm run transpile && npm run package"
+    "build:plugins": "npm run plugin:ngc && npm run plugin:tsc && npm run package"
   },
   "private": true,
   "dependencies": {
