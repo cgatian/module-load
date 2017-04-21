@@ -22,29 +22,29 @@ export class DynamicComponentLoader {
     const pluginUrlPrefix = 'assets/plugins';
     const factorySuffix = 'NgFactory';
 
-    this.http.get(`${pluginUrlPrefix}/${this.name}/${metadataPathSuffix}`)
-      .map(res => res.json())
-      .map((metadata: PluginMetadata) => {
+    // this.http.get(`${pluginUrlPrefix}/${this.name}/${metadataPathSuffix}`)
+    //   .map(res => res.json())
+    //   .map((metadata: PluginMetadata) => {
 
-        const script = document.createElement('script');
-        script.src = `${pluginUrlPrefix}/${this.name}/${factoryPathSuffix}`;
+        // const script = document.createElement('script');
+        // script.src = `assets/hello-world.umd.js`;
 
-        script.onload = () => {
+        // script.onload = () => {
 
-          const moduleFactory: NgModuleFactory<any> = window[metadata.name][metadata.moduleName + factorySuffix];
-          const moduleRef = moduleFactory.create(this.injector);
-          const factories: Map<any, any> = moduleRef.componentFactoryResolver['_factories'];
+        // //   const moduleFactory: NgModuleFactory<any> = window['hello-world'][metadata.moduleName + factorySuffix];
+        // //   const moduleRef = moduleFactory.create(this.injector);
+        // //   const factories: Map<any, any> = moduleRef.componentFactoryResolver['_factories'];
 
-          factories.forEach((factory: ComponentFactory<any>) => {
-            if (factory.componentType.name === this.componentName) {
-              this.viewRef.createComponent(factory);
-            }
-          });
-        };
+        // //   factories.forEach((factory: ComponentFactory<any>) => {
+        // //     if (factory.componentType.name === this.componentName) {
+        // //       this.viewRef.createComponent(factory);
+        // //     }
+        // //   });
+        // };
 
-        document.head.appendChild(script);
+        // document.head.appendChild(script);
 
-      }).subscribe();
+      // }).subscribe();
   }
 }
 

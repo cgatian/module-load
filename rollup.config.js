@@ -1,17 +1,10 @@
 export default {
-	entry: '.tmp/transpiled/index.js',
+	entry: '.tmp/aot-transpiled/.tmp/aot/src/plugins/hello-world.module.ngfactory.js',
 	dest: '.tmp/bundles/hello-world.umd.js',
-	sourceMap: false,
 	format: 'umd',
-	moduleName: 'hello-world',
+	moduleName: 'helloWorld',
 	globals: {
 		'@angular/core': 'ng.core',
-		'@angular/common': 'ng.common',
-		'rxjs/Observable': 'Rx',
-		'rxjs/ReplaySubject': 'Rx',
-		'rxjs/add/operator/map': 'Rx.Observable.prototype',
-		'rxjs/add/operator/mergeMap': 'Rx.Observable.prototype',
-		'rxjs/add/observable/fromEvent': 'Rx.Observable',
-		'rxjs/add/observable/of': 'Rx.Observable'
+		'@angular/common': 'ng.common'
 	}
 }

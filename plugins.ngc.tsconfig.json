@@ -1,31 +1,23 @@
 {
-	"compilerOptions": {
-		"declaration": true,
-		"stripInternal": true,
-		"experimentalDecorators": true,
-		"emitDecoratorMetadata": true,
-		"strictNullChecks": true,
-		"noImplicitAny": true,
-		"module": "es2015",
-		"moduleResolution": "node",
-		"typeRoots": [
-			"node_modules/@types"
-		],
-		"outDir": "./.tmp/transpiled",
-		"sourceMap": true,
-		"inlineSources": true,
-		"target": "es5",
-		"skipLibCheck": true,
-		"lib": [
-			"es2015",
-			"dom"
-		]
-	},
-	"files": [
-		"./src/plugins/index.ts"
-	],
-	"angularCompilerOptions": {
-		"strictMetadataEmit": true,
-		"genDir": "./.tmp/aot"
-	}
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "./.tmp/transpiled",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es2015", "dom"],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+
+  "files": [
+      "./src/plugins/index.ts"
+  ],
+
+  "angularCompilerOptions": {
+   "genDir": "./.tmp/aot",
+   "skipMetadataEmit" : true
+ }
 }

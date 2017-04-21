@@ -9,6 +9,7 @@ import { HelloWorldComponent } from './hello-world.component';
   imports: [ CommonModule ],
   exports: [],
   providers: [],
-  bootstrap: []
+  bootstrap: [],
+  entryComponents: [HelloWorldComponent]
 })
 export class HelloWorldModule {}
