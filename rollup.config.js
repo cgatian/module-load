@@ -1,9 +1,9 @@
 export default {
-	entry: 'dist/index.js',
-	dest: 'dist/bundles/npm-module-seed.umd.js',
+	entry: '.tmp/transpiled/index.js',
+	dest: '.tmp/bundles/hello-world.umd.js',
 	sourceMap: false,
 	format: 'umd',
-	moduleName: 'ng.npm-module-seed',
+	moduleName: 'hello-world',
 	globals: {
 		'@angular/core': 'ng.core',
 		'@angular/common': 'ng.common',
